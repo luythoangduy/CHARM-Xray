@@ -26,7 +26,7 @@ def get_disease_labels():
 def load_data():
     """Load and prepare the dataset"""
     # Load labels
-    labels_df = pd.read_csv('data/Data_Entry_2017.csv')
+    labels_df = pd.read_csv(DATA_PATHS['data_entry'])
     labels_df.columns = [
         'Image_Index', 'Finding_Labels', 'Follow_Up_#', 'Patient_ID',
         'Patient_Age', 'Patient_Gender', 'View_Position',
