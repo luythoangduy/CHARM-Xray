@@ -48,7 +48,7 @@ def load_data():
     )
     
     # Map image paths
-    num_glob = glob('data/*/images/*.png')
+    num_glob = glob.glob(DATA_PATHS['image_dir'])
     img_path = {os.path.basename(x): x for x in num_glob}
     labels_df['Paths'] = labels_df['Image_Index'].map(img_path.get)
     
